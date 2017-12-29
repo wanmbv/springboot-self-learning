@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://172.18.15.30:5432/restful?searchpath=restful&charset=utf8
+    username: restful
+    password: restfuldbuserlogin
+    driver-class-name: org.postgresql.Driver
+  freemarker:
+    template-loader-path: classpath:/web/
+    cache: false
+    charset: UTF-8
+    check-template-location: true
+    content-type: text/html
+    expose-request-attributes: true
+    expose-session-attributes: true
+    request-context-attribute: request
+    suffix: .ftl
+
+mybatis:
+  typeAliasesPackage: springboot.domain
+  mapperLocations: classpath:mapper/*.xml
